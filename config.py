@@ -1,5 +1,8 @@
 import os
 import redis.asyncio
+from dotenv import load_dotenv
+# Load environment variables from .env file
+load_dotenv()
 
 REDIS_URL = os.environ.get("REDIS_URL", "redis://localhost:6379")
 SCOPES = os.environ.get("SCOPES", "https://www.googleapis.com/auth/gmail.readonly").split(",")
